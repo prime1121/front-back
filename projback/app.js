@@ -35,6 +35,8 @@ app.use("/api", authRoutes);
 //PORT
 const port = process.env.PORT || 8000;
 
+app.use(express.static(__dirname));
+
 //Starting a server
 app.listen(port, () => {
   console.log(`app is running at ${port}`);
